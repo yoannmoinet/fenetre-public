@@ -1,0 +1,26 @@
+{
+  "name": "fenetre_website",
+  "version": "0.0.1",
+  "description": "Fenêtre's website.",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint \"./src/**/*.js\" && stylelint \"./src/**/*.css\""
+  },
+  "repository": "https://gitlab.com/yoannmoinet/fenetre-public",
+  "keywords": [],
+  "author": "Yoann Moinet",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "eslint": "^4.7.2",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.1.1",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {}
+}

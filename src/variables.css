@@ -1,0 +1,29 @@
+:root {
+    --font: SharpSans,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
+    --color-text: #262626;
+    --color-text2: #737373;
+    --font-size: 16px;
+    --font-size-medium: 14px;
+    --font-size-small: 10px;
+    --red: #db421f;
+    --red-fenetre: #ee4036;
+    --red-fenetre-alt: #ea585d;
+    --purple-fenetre: #b05486;
+    --blue-fenetre: #262261;
+    --white: #ececec;
+    --white-alt: #fcfcfc;
+    --grey: #d3d3d3;
+    --grey-alt: #b5b5b5;
+    --grey-alt-alt: #878787;
+    --grey-dark: #3b393b;
+    --tab-bar-height: 66px;
+    --tab-bar-width: 57px;
+    --tab-item-border-top-color: #545454;
+    --tab-item-border-bottom-color: #f4f4f4;
+    --tab-background:#d6d6d6;
+    --tab-title-color: #000;
+    --tab-description-color: #686868;
+    --fenetre-gradient: linear-gradient(90deg, var(--blue-fenetre), var(--red-fenetre));
+    --fenetre-gradient-alt: linear-gradient(90deg, rgba(var(--blue-fenetre), 0.58), rgba(var(--red-fenetre), 0.58));
+}
+

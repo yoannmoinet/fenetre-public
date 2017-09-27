@@ -1,0 +1,199 @@
+@import 'variables';
+@import 'fonts';
+
+html {
+    height: auto;
+}
+
+body {
+    font-family: var(--font);
+    margin: 0;
+    height: auto;
+}
+
+input {
+    font-family: var(--font);
+}
+
+pre {
+    display: inline;
+    color: var(--color-text);
+    border: var(--grey) solid 1px;
+    background: var(--white);
+    border-radius: 3px;
+    padding: 1px 5px;
+    text-transform: lowercase;
+}
+
+svg.fenetre-gradient {
+    path {
+        fill: url(#fenetreGradient);
+    }
+
+    &.fa-flip-horizontal {
+        path {
+            fill: url(#fenetreGradientRevert);
+        }
+    }
+
+    &.fa-spin {
+        path {
+            fill: url(#fenetreGradientRotate);
+        }
+    }
+}
+
+svg.defs {
+    position: absolute;
+
+    .svg-gradient stop.start-color {
+        stop-color: var(--blue-fenetre);
+    }
+
+    .svg-gradient stop.end-color {
+        stop-color: var(--red-fenetre);
+    }
+}
+
+.logo {
+    &::after {
+        content: ' ';
+        display: block;
+        width: 80px;
+        height: 100px;
+    }
+
+    .square {
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        position: absolute;
+        transform: rotate(45deg);
+        transform-origin: top left;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.05, 0.27, 0.28, 1);
+
+        &.square1 {
+            background: var(--red-fenetre-alt);
+            z-index: 2;
+            animation-name: comeFromTop;
+        }
+
+        &.square2 {
+            background: linear-gradient(135deg, var(--red-fenetre), var(--blue-fenetre));
+            opacity: 0.58;
+            top: 14px;
+            z-index: 4;
+            width: 40px;
+            height: 40px;
+            animation-name: growInCenter;
+
+            &.square21 {
+                background: var(--purple-fenetre);
+                z-index: 3;
+                animation-name: growInCenter;
+            }
+        }
+
+        &.square3 {
+            background: #181648;
+            z-index: 1;
+            animation-name: comeFromBottom;
+        }
+    }
+
+    &.infinite {
+        .square {
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@keyframes comeFromTop {
+    0% {
+        top: -20px;
+        transform: rotate(45deg) scale(1.2);
+    }
+
+    80% {
+        top: 10px;
+        transform: rotate(45deg) scale(1);
+    }
+
+    100% {
+        top: 10px;
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+@keyframes growInCenter {
+    0% {
+        filter: blur(3px);
+        opacity: 0.3;
+        width: 18px;
+        height: 18px;
+        top: 40px;
+    }
+
+    80% {
+        filter: blur(0);
+        opacity: 1;
+        width: 44px;
+        height: 44px;
+        top: 20px;
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 1;
+        width: 43px;
+        height: 43px;
+        top: 20px;
+    }
+}
+
+@keyframes comeFromBottom {
+    0% {
+        top: 40px;
+        transform: rotate(45deg) scale(0.8);
+    }
+
+    80% {
+        top: 20px;
+        transform: rotate(45deg) scale(1);
+    }
+
+    100% {
+        top: 20px;
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    overflow: show;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    background: var(--fenetre-gradient-alt);
+    border: none;
+    border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: var(--red-fenetre-alt);
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
