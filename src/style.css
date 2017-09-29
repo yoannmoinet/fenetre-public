@@ -31,9 +31,29 @@ footer {
     }
 
     & .menu {
+        align-items: center;
         color: var(--text-color-grey);
-        float: right;
+        display: flex;
         font-size: 14px;
+        justify-content: space-between;
+
+        & .item {
+            border-left: solid 1px var(--text-color-grey);
+            padding: 0 10px;
+
+            &:first-child {
+                border: none;
+            }
+
+            & a {
+                color: var(--text-color-grey);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }
 
