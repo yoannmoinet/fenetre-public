@@ -1,14 +1,10 @@
-@import 'variables';
-@import 'fonts';
-
-html {
-    height: auto;
-}
+@import './fonts.css';
+@import './variables.css';
 
 body {
-    font-family: var(--font);
     margin: 0;
-    height: auto;
+    padding: 0;
+    font-family: var(--font);
 }
 
 input {
@@ -26,18 +22,18 @@ pre {
 }
 
 svg.fenetre-gradient {
-    path {
+    & path {
         fill: url(#fenetreGradient);
     }
 
     &.fa-flip-horizontal {
-        path {
+        & path {
             fill: url(#fenetreGradientRevert);
         }
     }
 
     &.fa-spin {
-        path {
+        & path {
             fill: url(#fenetreGradientRotate);
         }
     }
@@ -46,11 +42,11 @@ svg.fenetre-gradient {
 svg.defs {
     position: absolute;
 
-    .svg-gradient stop.start-color {
+    & .svg-gradient stop.start-color {
         stop-color: var(--blue-fenetre);
     }
 
-    .svg-gradient stop.end-color {
+    & .svg-gradient stop.end-color {
         stop-color: var(--red-fenetre);
     }
 }
@@ -63,7 +59,7 @@ svg.defs {
         height: 100px;
     }
 
-    .square {
+    & .square {
         width: 50px;
         height: 50px;
         left: 50%;
@@ -105,7 +101,7 @@ svg.defs {
     }
 
     &.infinite {
-        .square {
+        & .square {
             animation-iteration-count: infinite;
         }
     }
