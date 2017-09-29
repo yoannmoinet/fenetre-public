@@ -6,7 +6,7 @@ module.exports = {
     context: path.join(__dirname),
     entry: './src/script.js',
     output: {
-        path: path.join(__dirname, './public'),
+        path: path.join(__dirname, './public/src/'),
         filename: 'script.js'
     },
     devServer: {
@@ -29,7 +29,7 @@ module.exports = {
                 }
             }, {
                 test: /\.(otf|woff2?|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                use: `file-loader?limit=1000&name=[name].[ext]`
+                use: `file-loader?limit=1000&name=webfonts/[name].[ext]`
             }, {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
