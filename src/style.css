@@ -1,5 +1,33 @@
 @import './reset.css';
 
+:root {
+    --h1-size: 64px;
+    --h2-size: 25px;
+    --a-size: 18px;
+    --p-size: 22px;
+    --button-size: 30px;
+    --button-min-width: 280px;
+    --button-padding-h: 35px;
+    --button-padding-v: 25px;
+    --section-padding-v: 100px;
+    --article-padding-big: 150px;
+    --article-padding-small: 60px;
+    --article-max-width: 1024px;
+    --header-padding: 25px;
+    --logo-header-size: 30px;
+    --logo-footer-size: 25px;
+    --footer-size: 14px;
+    --prime-text-padding: 150px;
+    --features-margin-bottom: 30px;
+    --features-flex-basis: calc(100% / 3);
+    --features-title-size: 20px;
+    --features-title-margin: 33px 0;
+    --features-text-size: 16px;
+    --features-text-margin: 10px;
+    --features-svg-size: 45px;
+    --features-svg-margin: 35px;
+}
+
 header,
 footer,
 section {
@@ -21,11 +49,11 @@ footer {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 25px;
+    padding: var(--header-padding);
 
     & .logo-container {
         & svg {
-            height: 25px;
+            height: var(--logo-footer-size);
             width: auto;
         }
     }
@@ -34,7 +62,7 @@ footer {
         align-items: center;
         color: var(--text-color-grey);
         display: flex;
-        font-size: 14px;
+        font-size: var(--footer-size);
         justify-content: space-between;
 
         & .item {
@@ -62,7 +90,7 @@ header {
 
     & .logo-container {
         & svg {
-            height: 30px;
+            height: var(--logo-header-size);
             width: auto;
         }
     }
@@ -70,7 +98,7 @@ header {
 
 section {
     background: var(--white-background);
-    padding: 100px 0;
+    padding: var(--section-padding-v) 0;
 
     & h1,
     & h2,
@@ -106,15 +134,15 @@ section {
 }
 
 p {
-    font-size: 22px;
+    font-size: var(--p-size);
     font-weight: 600;
 }
 
 h1 {
-    font-size: 64px;
+    font-size: var(--h1-size);
 
     & p {
-        font-size: 64px;
+        font-size: var(--h1-size);
         font-weight: 700;
         margin: 0;
         padding: 0;
@@ -122,7 +150,7 @@ h1 {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: var(--h2-size);
     font-weight: 600;
 }
 
@@ -133,7 +161,11 @@ h1 + h2 {
 
 a {
     color: var(--text-color-black);
-    font-size: 18px;
+    font-size: var(--a-size);
+}
+
+.hide-mobile {
+    display: block;
 }
 
 .buttons {
@@ -158,10 +190,10 @@ a {
     background: var(--white-background);
     border: 1px solid var(--border-dark);
     color: var(--black);
-    font-size: 30px;
+    font-size: var(--button-size);
     font-weight: 600;
-    min-width: 280px;
-    padding: 25px 35px;
+    min-width: var(--button-min-width);
+    padding: var(--button-padding-h) var(--button-padding-v);
     text-align: center;
     text-decoration: none;
     width: auto;
@@ -173,12 +205,12 @@ a {
 
 article {
     width: 50%;
-    padding: 0 60px 0 150px;
+    padding: 0 var(--article-padding-small) 0 var(--article-padding-big);
     position: relative;
 
     &:only-child {
-        max-width: 1024px;
-        padding: 0 60px;
+        max-width: var(--article-max-width);
+        padding: 0 var(--article-padding-small);
         text-align: center;
         width: 100%;
 
@@ -202,7 +234,7 @@ aside {
     }
 
     & + article {
-        padding: 0 150px 0 60px;
+        padding: 0 var(--article-padding-big) 0 var(--article-padding-small);
     }
 }
 
@@ -232,7 +264,7 @@ aside {
     }
 
     & #prime-text {
-        padding-left: 150px;
+        padding-left: var(--prime-text-padding);
     }
 
     & #prime-image-computer {
@@ -244,7 +276,14 @@ aside {
         margin-top: 6%;
         position: absolute;
         width: 74%;
+        height: 80%;
         z-index: 2;
+
+        & video {
+            height: 100%;
+            margin-left: -53%;
+            width: auto;
+        }
     }
 
     & #prime-image-logo {
@@ -269,34 +308,20 @@ aside {
     }
 }
 
-#steps {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 75px;
-
-    & .step {
-        border: 1px solid var(--border-dark);
-        border-radius: 50%;
-        height: 121px;
-        width: 121px;
-    }
-}
-
 #features {
     & #features-list {
         align-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-bottom: 30px;
+        margin-bottom: var(--features-margin-bottom);
 
         & .feature {
-            flex-basis: 33.33%;
+            flex-basis: var(--features-flex-basis);
             flex-grow: 0;
             flex-shrink: 0;
-            font-size: 20px;
-            margin: 33px 0;
+            font-size: var(--features-title-size);
+            margin: var(--features-title-margin);
             text-align: center;
 
             & b {
@@ -304,18 +329,30 @@ aside {
             }
 
             & p {
-                font-size: 16px;
+                font-size: var(--features-text-size);
                 font-weight: 200;
-                margin-top: 10px;
+                margin-top: var(--features-text-margin);
+
+                & a {
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                & svg {
+                    display: inline;
+                    margin: 0 20px;
+                    height: 15px;
+                    width: 15px;
+                }
             }
 
-            & svg {
+            & > svg {
                 display: block;
-                height: 45px;
-                margin-bottom: 35px;
+                height: var(--features-svg-size);
+                margin-bottom: var(--features-svg-margin);
                 margin-left: 50%;
                 transform: translateX(-50%);
-                width: 45px;
+                width: var(--features-svg-size);
             }
         }
     }
@@ -323,7 +360,7 @@ aside {
 
 #picture-in-picture {
     & #picture-text {
-        margin-bottom: -100px;
+        margin-bottom: calc(-1 * var(--section-padding-v));
         padding: 0 40px;
 
         & h1 {
@@ -332,6 +369,12 @@ aside {
 
         & #picture-image-capture {
             margin-top: -4px;
+            overflow: hidden;
+
+            & video {
+                width: 100%;
+                margin-bottom: -22px;
+            }
         }
     }
 }
@@ -344,7 +387,7 @@ aside {
         margin-right: auto;
     }
 
-    & .image img {
+    & .image video {
         height: auto;
         margin-top: 50px;
         margin-bottom: -100px;
