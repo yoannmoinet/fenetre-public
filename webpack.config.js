@@ -9,13 +9,11 @@ module.exports = {
         path: path.join(__dirname, './public/src/'),
         filename: 'script.js'
     },
+    target: 'web',
     devServer: {
         contentBase: path.join(__dirname, './public'),
         publicPath: '/src/',
-        compress: true,
-        port: 9000,
-        hot: true,
-        progress: true
+        port: 9000
     },
     module: {
         rules: [

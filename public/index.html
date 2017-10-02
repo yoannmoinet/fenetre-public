@@ -66,15 +66,22 @@
                         </g>
                     </svg>
                 </div>
-                <nav class="menu">
-                    <div class="item"><a href="https://twitter.com/FenetreApp" target="_blank">Contact</a></div>
-                    <div class="item"><a href="https://twitter.com/FenetreApp" target="_blank">@FenetreApp</a></div>
-                </nav>
             </header>
-            <section id="prime">
+            <section id="prime" class="grey">
                 <aside id="prime-image" class="section-image">
+                    <div id="prime-image-screen">
+                        <img
+                            src="./assets/productivity-screen.jpg"
+                            alt="Fenêtre, party in the front, work in the back"
+                            srcset="./assets/productivity-screen@2x.jpg 2x"
+                        />
+                    </div>
                     <div id="prime-image-computer">
-                        <img src="./assets/prime.png" alt="Fenêtre, party in the front, work in the back." />
+                        <img
+                            src="./assets/productivity.png"
+                            alt="Macbook pro"
+                            srcset="./assets/productivity@2x.png 2x"
+                        />
                     </div>
                     <div id="prime-image-logo">
                         <svg id="33daa90f-bc5f-45c5-b3e0-63c5efad60f5" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="236" height="271.37" viewBox="0 0 236 271.37">
@@ -103,72 +110,92 @@
                     </h1>
                     <h2>Picture in picture for your mac.</h2>
                     <div class="buttons">
-                        <button>Lite Version</button>
-                        <button>Full Version</button>
+                        <a href="https://itunes.apple.com/us/app/fen%C3%AAtre-lite/id1288451627" target="_blank" class="button light">Try lite version</a>
+                        <a href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" target="_blank" class="button">Buy pro version</a>
                     </div>
                 </article>
             </section>
-            <section id="picture-in-picture" class="odd">
+            <section id="picture-in-picture" class="grey2">
                 <article id="picture-text" class="section-text">
-                    <h1>Picture in picture...</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Commodi, libero ipsam sunt atque iusto iure reiciendis maiores
-                        consequatur facere minima aliquid quasi quod earum nobis nihil
-                        cum numquam? Minus, maiores!</p>
-                    <button>Lite Version</button>
-                </article>
-                <aside id="picture-image" class="section-image">
-                    <div id="picture-image-capture">
-                        <img src="./assets/picture-in-picture.png" alt="Picture in picture with Fenêtre">
+                    <p>This is the future of multitasking</p>
+                    <h1>Work with it</h1>
+                    <div class="image screen">
+                        <img
+                            src="./assets/screen.jpg"
+                            alt="Macbook pro screen"
+                            srcset="./assets/screen@2x.jpg 2x"
+                        />
                     </div>
-                </aside>
+                    <div class="video" id="picture-image-capture">
+                        <img
+                            src="./assets/picture-in-picture.jpg"
+                            alt="Picture in picture with Fenêtre"
+                            srcset="./assets/picture-in-picture@2x.jpg 2x"
+                        />
+                    </div>
+                </article>
             </section>
             <section id="unique-features">
                 <article id="unique-text" class="section-text">
                     <h1>Unique features, thoughtful design</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quo voluptate amet rem eveniet dolorum tempora fugiat,
-                        minus sequi doloremque voluptatum tenetur ea nam, dignissimos,
-                        officiis molestias. Nam sapiente dolorum distinctio!</p>
-                    <div class="buttons">
-                        <button>Lite Version</button>
-                    </div>
+                    <p>With see-through and click-through features you've got
+                        the best of both worlds. Multitasking just got a new best friend.
+                    </p>
+                    <a href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" target="_blank">This feature is only available on the pro version.</a>
                     <div class="image">
-                        <img src="./assets/unique-features.png" alt="Click through and see through with Fenêtre">
+                        <img
+                            src="./assets/see-through.jpg"
+                            alt="Click through and see through with Fenêtre"
+                            srcset="./assets/see-through@2x.jpg 2x"
+                        />
                     </div>
                 </article>
             </section>
             <section id="features" class="odd">
                 <article id="features-text" class="section-text">
-                    <h1>Features</h1>
+                    <h1>The features</h1>
                     <div id="features-list">
-                        <div class="feature">See and click through</div>
-                        <div class="feature">Browser extensions</div>
-                        <div class="feature">Opacity control</div>
-                        <div class="feature">Minimizable windows</div>
-                        <div class="feature">Recent history</div>
-                        <div class="feature">Settings and hotkeys</div>
-                        <div class="feature">Clipboard usage</div>
-                        <div class="feature">Markdown compiler</div>
+                        <div class="feature">
+                            <i class="fal fa-location-arrow"></i>
+                            <b>Click-through</b>
+                            <p>*pro feature</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fal fa-eye"></i>
+                            <b>See-through</b>
+                            <p>*pro feature</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fal fa-plus-circle"></i>
+                            <b>Browser extension</b>
+                            <p>for right click functions</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fal fa-code"></i>
+                            <b>Preview markdown files</b>
+                            <p>format your documents</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fal fa-database"></i>
+                            <b>No data collection</b>
+                            <p>not now, not ever</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fal fa-check-circle"></i>
+                            <b>Increase productivity</b>
+                            <p>multitask like a boss</p>
+                        </div>
                     </div>
-                </article>
-            </section>
-            <section id="steps-away">
-                <article id="steps-text" class="section-text">
-                    <div id="steps">
-                        <div class="step"></div>
-                        <div class="step"></div>
-                        <div class="step"></div>
-                    </div>
-                    <h1>You're three steps away from the experience</h1>
+                    <a href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" target="_blank">View full list of features in Mac AppStore</a>
                 </article>
             </section>
             <section id="buy-it" class="grey">
                 <article id="buy-text" class="section-text">
-                    <h1>Buy it now and enjoy a 35% launch price</h1>
+                    <h1><p>Buy now for 30% off</p><p>launch price special</p></h1>
+                    <p>Offer ends November 23rd 2017</p>
                     <div class="buttons">
-                        <button>Lite Version</button>
-                        <button>Full Version</button>
+                        <a href="https://itunes.apple.com/us/app/fen%C3%AAtre-lite/id1288451627" target="_blank" class="button light">Try lite version</a>
+                        <a href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" target="_blank" class="button">Go Pro</a>
                     </div>
                 </article>
             </section>
