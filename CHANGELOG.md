@@ -1,3 +1,12 @@
+## 0.3.9 (2017-10-03)
+
+### Bug Fixes
+
+* fix(pro): remove Go Pro link from tray
+
+### Features
+
+* feat: better handle image resizing
 ## 0.3.8 (2017-10-03)
 
 ### Bug Fixes
