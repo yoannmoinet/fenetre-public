@@ -6,7 +6,9 @@
 
 ### Features
 
+* feat: add a 'What's New?' link in the tray
 * feat: better handle image resizing
+
 ## 0.3.8 (2017-10-03)
 
 ### Bug Fixes
@@ -21,3 +23,4 @@
 
 * feat(free): add Go Pro link in the tray
 * feat(free): make markdown preview a free feature
+
