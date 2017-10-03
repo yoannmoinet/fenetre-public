@@ -98,6 +98,7 @@ header {
 
 section {
     background: var(--white-background);
+    overflow: hidden;
     padding: var(--section-padding-v) 0;
 
     & h1,

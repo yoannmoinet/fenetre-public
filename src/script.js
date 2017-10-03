@@ -1,6 +1,14 @@
 import './style.css';
-require('./vendor/light');
-require('./vendor/brands');
-require('./vendor/fontawesome');
+import aos from 'aos';
+import 'aos/dist/aos.css';
+import './vendor/light';
+import './vendor/brands';
+import './vendor/fontawesome';
 
-console.log('Yo');
+aos.init({
+  duration: 750
+});
+
+if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+}
