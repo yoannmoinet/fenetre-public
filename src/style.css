@@ -251,13 +251,28 @@ aside {
     border-top-right-radius: 40px;
     margin-left: -40px;
     margin-top: -40px;
+    margin-right: -40px;
     overflow: hidden;
     position: absolute;
-    width: 100%;
+    width: auto;
     z-index: 0;
 
     & img {
         margin-top: -2px;
+    }
+}
+
+[data-aos="tilt-up"] {
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateX(20deg);
+    transition-property: transform, opacity;
+    opacity: 0;
+
+    &.aos-animate {
+        transform: rotateX(0);
+        opacity: 1;
     }
 }
 
@@ -268,6 +283,10 @@ aside {
 
     & #prime-text {
         padding-left: var(--prime-text-padding);
+    }
+
+    & .image {
+        z-index: 1;
     }
 
     & #prime-image-computer {
@@ -365,18 +384,20 @@ aside {
     & #picture-text {
         margin-bottom: calc(-1 * var(--section-padding-v));
         padding: 0 40px;
+        perspective: 500px;
 
         & h1 {
             margin-bottom: 80px;
         }
 
         & #picture-image-capture {
+            margin-bottom: -26px;
             margin-top: -4px;
             overflow: hidden;
 
-            & video {
+            & video,
+            & img {
                 width: 100%;
-                margin-bottom: -22px;
             }
         }
     }
