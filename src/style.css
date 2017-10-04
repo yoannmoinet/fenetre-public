@@ -1,14 +1,14 @@
 @import './reset.css';
 
 :root {
-    --h1-size: 64px;
+    --h1-size: 60px;
     --h2-size: 25px;
     --a-size: 18px;
     --p-size: 22px;
     --button-size: 30px;
-    --button-min-width: 280px;
-    --button-padding-h: 35px;
-    --button-padding-v: 25px;
+    --button-min-width: 200px;
+    --button-padding-h: 30px;
+    --button-padding-v: 20px;
     --section-padding-v: 100px;
     --article-padding-big: 150px;
     --article-padding-small: 60px;
@@ -136,15 +136,16 @@ section {
 
 p {
     font-size: var(--p-size);
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 h1 {
     font-size: var(--h1-size);
+    line-height: 75px;
 
     & p {
         font-size: var(--h1-size);
-        font-weight: 700;
+        /* font-weight: 700; */
         margin: 0;
         padding: 0;
     }
@@ -152,17 +153,18 @@ h1 {
 
 h2 {
     font-size: var(--h2-size);
-    font-weight: 600;
+    font-weight: 300;
 }
 
 h1 + h2 {
     margin-top: -40px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 a {
     color: var(--text-color-black);
     font-size: var(--a-size);
+    font-weight: 100;
 }
 
 .hide-mobile {
@@ -192,9 +194,9 @@ a {
     border: 1px solid var(--border-dark);
     color: var(--black);
     font-size: var(--button-size);
-    font-weight: 600;
+    /* font-weight: 600; */
     min-width: var(--button-min-width);
-    padding: var(--button-padding-h) var(--button-padding-v);
+    padding: var(--button-padding-v) var(--button-padding-h);
     text-align: center;
     text-decoration: none;
     width: auto;
@@ -326,12 +328,12 @@ aside {
             text-align: center;
 
             & b {
-                font-weight: 600;
+                font-weight: 500;
             }
 
             & p {
                 font-size: var(--features-text-size);
-                font-weight: 200;
+                font-weight: 100;
                 margin-top: var(--features-text-margin);
 
                 & a {
@@ -381,8 +383,8 @@ aside {
 }
 
 #unique-features {
-    & #unique-text p {
-        max-width: 620px;
+    & #unique-text h2 {
+        max-width: 680px;
         margin-bottom: 50px;
         margin-left: auto;
         margin-right: auto;
