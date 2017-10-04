@@ -1,3 +1,9 @@
+# 0.4.0 (2017-10-04)
+
+### Features
+
+* feat(free): allow browser extension to open through free app
+
 ## 0.3.9 (2017-10-03)
 
 ### Bug Fixes
