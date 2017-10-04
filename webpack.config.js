@@ -46,7 +46,6 @@ module.exports = {
                                     require('postcss-import')({ root: loader.resourcePath }),
                                     require('postcss-cssnext')({ warnForDuplicates: false}),
                                     require('autoprefixer')(),
-                                    require('postcss-css-variables')(),
                                     require('cssnano')()
                                 ]
                             }

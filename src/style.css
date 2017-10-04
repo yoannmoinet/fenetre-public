@@ -46,52 +46,6 @@
     }
 }
 
-@media (width <= 1024px) {
-    .hide-mobile {
-        display: none;
-    }
-
-    .hide-desktop {
-        display: block;
-    }
-
-    :root {
-        --h1-size: 30px;
-        --h2-size: 25px;
-        --a-size: 18px;
-        --p-size: 22px;
-        --button-size: 30px;
-        --button-min-width: 200px;
-        --button-padding-h: 30px;
-        --button-padding-v: 20px;
-        --section-padding-v: 100px;
-        --article-padding-big: 150px;
-        --article-padding-small: 60px;
-        --article-max-width: 1024px;
-        --header-padding: 25px;
-        --logo-header-size: 30px;
-        --logo-footer-size: 25px;
-        --footer-size: 14px;
-        --prime-text-padding: 150px;
-        --features-margin-bottom: 30px;
-        --features-flex-basis: calc(100% / 3);
-        --features-title-size: 20px;
-        --features-title-margin: 33px 0;
-        --features-text-size: 16px;
-        --features-text-margin: 10px;
-        --features-svg-size: 45px;
-        --features-svg-margin: 35px;
-    }
-
-    .hide-mobile + article {
-        @apply --article-alone;
-
-        & .buttons {
-            justify-content: center;
-        }
-    }
-}
-
 header,
 footer,
 section {
@@ -200,7 +154,6 @@ section {
 
 p {
     font-size: var(--p-size);
-    /* font-weight: 600; */
 }
 
 h1 {
@@ -209,7 +162,6 @@ h1 {
 
     & p {
         font-size: var(--h1-size);
-        /* font-weight: 700; */
         margin: 0;
         padding: 0;
     }
@@ -395,7 +347,7 @@ aside {
             margin: var(--features-title-margin);
             text-align: center;
 
-            & b {
+            & strong {
                 font-weight: 500;
             }
 
@@ -471,5 +423,56 @@ aside {
 #buy-it {
     & .buttons {
         margin-top: 60px;
+    }
+}
+
+@media (width <= 1024px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .hide-desktop {
+        display: block;
+    }
+
+    .hide-mobile + article {
+        @apply --article-alone;
+
+        & .buttons {
+            justify-content: center;
+        }
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+
+        & p {
+            font-size: 40px;
+        }
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h1 + h2 {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+    .button {
+        font-size: 20px;
+        min-width: 150px;
+        padding: 10px 20px;
+    }
+
+    #unique-features {
+        & #unique-text h2 {
+            max-width: 450px;
+        }
     }
 }
