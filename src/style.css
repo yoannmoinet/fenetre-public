@@ -1,12 +1,20 @@
 @import './reset.css';
 
+.hide-mobile {
+    display: block;
+}
+
+.hide-desktop {
+    display: none;
+}
+
 :root {
     --h1-size: 60px;
     --h2-size: 25px;
     --a-size: 18px;
     --p-size: 22px;
     --button-size: 30px;
-    --button-min-width: 200px;
+    --button-min-width: 220px;
     --button-padding-h: 30px;
     --button-padding-v: 20px;
     --section-padding-v: 100px;
@@ -26,6 +34,62 @@
     --features-text-margin: 10px;
     --features-svg-size: 45px;
     --features-svg-margin: 35px;
+    --article-alone: {
+        max-width: var(--article-max-width);
+        padding: 0 var(--article-padding-small);
+        text-align: center;
+        width: 100%;
+
+        & h1 {
+            text-align: center;
+        }
+    }
+}
+
+@media (width <= 1024px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .hide-desktop {
+        display: block;
+    }
+
+    :root {
+        --h1-size: 30px;
+        --h2-size: 25px;
+        --a-size: 18px;
+        --p-size: 22px;
+        --button-size: 30px;
+        --button-min-width: 200px;
+        --button-padding-h: 30px;
+        --button-padding-v: 20px;
+        --section-padding-v: 100px;
+        --article-padding-big: 150px;
+        --article-padding-small: 60px;
+        --article-max-width: 1024px;
+        --header-padding: 25px;
+        --logo-header-size: 30px;
+        --logo-footer-size: 25px;
+        --footer-size: 14px;
+        --prime-text-padding: 150px;
+        --features-margin-bottom: 30px;
+        --features-flex-basis: calc(100% / 3);
+        --features-title-size: 20px;
+        --features-title-margin: 33px 0;
+        --features-text-size: 16px;
+        --features-text-margin: 10px;
+        --features-svg-size: 45px;
+        --features-svg-margin: 35px;
+    }
+
+    .hide-mobile + article {
+        @apply --article-alone;
+
+        & .buttons {
+            justify-content: center;
+        }
+    }
 }
 
 header,
@@ -167,10 +231,6 @@ a {
     font-weight: 100;
 }
 
-.hide-mobile {
-    display: block;
-}
-
 .buttons {
     align-items: center;
     display: flex;
@@ -194,7 +254,6 @@ a {
     border: 1px solid var(--border-dark);
     color: var(--black);
     font-size: var(--button-size);
-    /* font-weight: 600; */
     min-width: var(--button-min-width);
     padding: var(--button-padding-v) var(--button-padding-h);
     text-align: center;
@@ -208,18 +267,11 @@ a {
 
 article {
     width: 50%;
-    padding: 0 var(--article-padding-small) 0 var(--article-padding-big);
+    padding: 0 var(--article-padding-big) 0 var(--article-padding-small);
     position: relative;
 
     &:only-child {
-        max-width: var(--article-max-width);
-        padding: 0 var(--article-padding-small);
-        text-align: center;
-        width: 100%;
-
-        & h1 {
-            text-align: center;
-        }
+        @apply --article-alone;
     }
 
     & img {
@@ -237,7 +289,11 @@ aside {
     }
 
     & + article {
-        padding: 0 var(--article-padding-big) 0 var(--article-padding-small);
+        padding: 0 var(--article-padding-small) 0 var(--article-padding-big);
+
+        & .buttons {
+            justify-content: flex-start;
+        }
     }
 }
 
@@ -281,10 +337,6 @@ aside {
         position: relative;
     }
 
-    & #prime-text {
-        padding-left: var(--prime-text-padding);
-    }
-
     & .image {
         z-index: 1;
     }
@@ -301,7 +353,8 @@ aside {
         height: 80%;
         z-index: 2;
 
-        & video {
+        & video,
+        & img {
             height: 100%;
             margin-left: -53%;
             width: auto;
@@ -320,13 +373,9 @@ aside {
         & svg {
             height: 100%;
             position: absolute;
-            right: -60px;
+            right: -10%;
             width: auto;
         }
-    }
-
-    & .buttons {
-        justify-content: flex-start;
     }
 }
 
@@ -383,7 +432,6 @@ aside {
 #picture-in-picture {
     & #picture-text {
         margin-bottom: calc(-1 * var(--section-padding-v));
-        padding: 0 40px;
         perspective: 500px;
 
         & h1 {
@@ -411,7 +459,8 @@ aside {
         margin-right: auto;
     }
 
-    & .image video {
+    & .image video,
+    & .image img {
         height: auto;
         margin-top: 50px;
         margin-bottom: -100px;
