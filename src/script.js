@@ -12,3 +12,16 @@ aos.init({
 if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
     location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 }
+
+const $more = document.querySelector('#and-more');
+$more.querySelectorAll('strong').forEach((el) => {
+  el.addEventListener('click', () => {
+    const collapsed = $more.classList.contains('collapsed');
+
+    if (collapsed) {
+      $more.classList.remove('collapsed');
+    } else {
+      $more.classList.add('collapsed');
+    }
+  });
+});

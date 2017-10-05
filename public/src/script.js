@@ -94,6 +94,19 @@ if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
   location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 }
 
+var $more = document.querySelector('#and-more');
+$more.querySelectorAll('strong').forEach(function (el) {
+  el.addEventListener('click', function () {
+    var collapsed = $more.classList.contains('collapsed');
+
+    if (collapsed) {
+      $more.classList.remove('collapsed');
+    } else {
+      $more.classList.add('collapsed');
+    }
+  });
+});
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
