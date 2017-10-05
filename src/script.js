@@ -6,8 +6,7 @@ import './vendor/brands';
 import './vendor/fontawesome';
 
 aos.init({
-  duration: 750,
-  startEvent: 'DOMContentLoaded'
+  duration: 750
 });
 
 if (location.hostname !== 'localhost' && location.protocol !== 'https:') {

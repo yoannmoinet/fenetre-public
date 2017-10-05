@@ -87,8 +87,7 @@ __webpack_require__(6);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _aos2.default.init({
-  duration: 750,
-  startEvent: 'DOMContentLoaded'
+  duration: 750
 });
 
 if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
