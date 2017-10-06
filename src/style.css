@@ -362,7 +362,7 @@ aside {
     }
 
     & #and-more {
-        height: 320px;
+        height: 400px;
         overflow: hidden;
         transition: height 0.25s linear;
 
@@ -388,6 +388,24 @@ aside {
             }
         }
 
+        & .feature-lists {
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            margin: 40px auto 0;
+            max-width: 700px;
+
+            & .feature-list {
+                flex-basis: 50%;
+                align-self: flex-start;
+                transition: transform 250ms ease-in-out,
+                    opacity 250ms ease-in-out;
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
         & ul {
             list-style: none;
             padding: 0;
@@ -402,6 +420,18 @@ aside {
 
             & strong.show-collapsed {
                 display: block;
+            }
+
+            & .feature-lists .feature-list {
+                &#pro-list {
+                    transform: translateX(40px);
+                    opacity: 0;
+                }
+
+                &#free-list {
+                    transform: translateX(-40px);
+                    opacity: 0;
+                }
             }
         }
     }
