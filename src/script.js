@@ -25,3 +25,5 @@ $more.querySelectorAll('strong').forEach((el) => {
     }
   });
 });
+
+document.querySelector('.menu .item.mail a').href = 'mailto:support@fenêt.re';

@@ -107,6 +107,8 @@ $more.querySelectorAll('strong').forEach(function (el) {
   });
 });
 
+document.querySelector('.menu .item.mail a').href = 'mailto:support@fenêt.re';
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
