@@ -1,3 +1,15 @@
+## 0.4.5 (2017-10-10)
+
+### Bug Fixes
+
+* fix: change app type from helper to real app
+* fix: do not download unsupported files, instead show a message
+* fix(onboarding): change misleading message in first popup
+
+### Features
+
+* feat: add flash support
+
 ## 0.4.3 (2017-10-09)
 
 ### Bug Fixes
