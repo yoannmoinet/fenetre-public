@@ -1,4 +1,15 @@
-## 0.4.5 (2017-10-10)
+## 0.4.6 (2017-10-11)
+
+### Bug Fixes
+
+* fix: another destroyed window error
+* fix: update destroyed window detection logic
+
+### Features
+
+* feat: new extension system
+
+## 0.4.5 (2017-10-11)
 
 ### Bug Fixes
 
@@ -10,24 +21,24 @@
 
 * feat: add flash support
 
-## 0.4.3 (2017-10-09)
+## 0.4.3 (2017-10-11)
 
 ### Bug Fixes
 
 * fix: bug when accessing destroyed windows
 * fix(onboarding): do not steal focus with onboarding popup
-* fix: update firefox extension link in settings (thanks @Hates_)
+* fix: update firefox extension link in settings (thanks Hates_)
 * fix(about): better logo animation
 * fix(browser): will now open with the extension more consistently
 * fix(entitlements): remove server entitlement
 * fix(free): no more dual content playing at the same time
 * fix(markdown): remove leak of markdown viewer to every text files
-* fix(parser): keep the port of the url (thanks @round, @martinbalfanz)
+* fix(parser): keep the port of the url (thanks round, martinbalfanz)
 * fix(pro): remove duplicate shortcut registration
 * fix(resize): avoid any errors with NaN
 * fix(settings): do not erase shortcuts when not set after saving settings
-* fix(twitch): remove mobile view for Twitch (thanks @dfcarpenter)
-* fix(web): remove useragent attribute if null (thanks  @codeurge)
+* fix(twitch): remove mobile view for Twitch (thanks dfcarpenter)
+* fix(web): remove useragent attribute if null (thanks  codeurge)
 * fix(window): avoid async access to window if destroyed
 
 ### Features
