@@ -1,3 +1,18 @@
+## 0.4.7 (2017-10-16)
+
+### Bug Fixes
+
+* fix: do not register mouse while in see-through mode (thanks altermatte)
+
+### Features
+
+* feat: add a setting to control see-through mask radius
+* feat: add description in settings
+* feat: add setting to hide dock icon (thanks typicaltechtran JustinMoodie)
+* feat: add settings to only activate opacity on hover
+* feat: better class helper
+* feat: make a google search from the clipboard if not a parsable URL
+
 ## 0.4.6 (2017-10-11)
 
 ### Bug Fixes
