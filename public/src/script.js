@@ -95,6 +95,9 @@ if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
 }
 
 var $more = document.querySelector('#and-more');
+var $btnBuy = document.querySelectorAll('.buy');
+var $btnTry = document.querySelectorAll('.try');
+
 $more.querySelectorAll('strong').forEach(function (el) {
   el.addEventListener('click', function () {
     var collapsed = $more.classList.contains('collapsed');
@@ -104,6 +107,20 @@ $more.querySelectorAll('strong').forEach(function (el) {
     } else {
       $more.classList.add('collapsed');
     }
+  });
+});
+
+$btnBuy.forEach(function (bt) {
+  bt.addEventListener('click', function () {
+    fbq('track', 'InitiateCheckout');
+    ga('send', 'event', 'Clicks', 'GoToAppStore', 'Pro');
+  });
+});
+
+$btnTry.forEach(function (bt) {
+  bt.addEventListener('click', function () {
+    fbq('track', 'Lead');
+    ga('send', 'event', 'Clicks', 'GoToAppStore', 'Lite');
   });
 });
 
