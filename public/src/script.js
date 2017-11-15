@@ -113,14 +113,20 @@ $more.querySelectorAll('strong').forEach(function (el) {
 $btnBuy.forEach(function (bt) {
   bt.addEventListener('click', function () {
     fbq('track', 'InitiateCheckout');
-    ga('send', 'event', 'Clicks', 'GoToAppStore', 'Pro');
+    gtag('event', 'view_item', {
+      'event_category': 'GoToAppStore',
+      'event_label': 'Pro'
+    });
   });
 });
 
 $btnTry.forEach(function (bt) {
   bt.addEventListener('click', function () {
     fbq('track', 'Lead');
-    ga('send', 'event', 'Clicks', 'GoToAppStore', 'Lite');
+    gtag('event', 'generate_lead', {
+      'event_category': 'GoToAppStore',
+      'event_label': 'Lite'
+    });
   });
 });
 

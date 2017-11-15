@@ -32,14 +32,20 @@ $more.querySelectorAll('strong').forEach((el) => {
 $btnBuy.forEach((bt) => {
   bt.addEventListener('click', () => {
     fbq('track', 'InitiateCheckout');
-    ga('send', 'event', 'Clicks', 'GoToAppStore', 'Pro');
+    gtag('event', 'view_item', {
+      'event_category': 'GoToAppStore',
+      'event_label': 'Pro'
+    });
   });
 });
 
 $btnTry.forEach((bt) => {
   bt.addEventListener('click', () => {
     fbq('track', 'Lead');
-    ga('send', 'event', 'Clicks', 'GoToAppStore', 'Lite');
+    gtag('event', 'generate_lead', {
+      'event_category': 'GoToAppStore',
+      'event_label': 'Lite'
+    });
   });
 });
 
