@@ -7,6 +7,7 @@ module.exports = {
     },
     "globals": {
         "fbq": true,
+        "ga": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
