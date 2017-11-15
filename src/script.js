@@ -14,6 +14,9 @@ if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
 }
 
 const $more = document.querySelector('#and-more');
+const $btnBuy = document.querySelectorAll('.buy');
+const $btnTry = document.querySelectorAll('.try');
+
 $more.querySelectorAll('strong').forEach((el) => {
   el.addEventListener('click', () => {
     const collapsed = $more.classList.contains('collapsed');
@@ -23,6 +26,18 @@ $more.querySelectorAll('strong').forEach((el) => {
     } else {
       $more.classList.add('collapsed');
     }
+  });
+});
+
+$btnBuy.forEach((bt) => {
+  bt.addEventListener('click', () => {
+    fbq('track', 'InitiateCheckout');
+  });
+});
+
+$btnTry.forEach((bt) => {
+  bt.addEventListener('click', () => {
+    fbq('track', 'Lead');
   });
 });
 

@@ -5,6 +5,9 @@ module.exports = {
         "es6": true,
         "node": true
     },
+    "globals": {
+        "fbq": true,
+    },
     "extends": "eslint:recommended",
     "parserOptions": {
         "sourceType": "module"
