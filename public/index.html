@@ -6,7 +6,6 @@
         <meta name="description" content="Party in the front, business in the back. Picture in picture for your mac.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="0JkB8LzgjXJi22AEDW9Pg03bRMSMQyg-dFfDugZZMB0" />
-        <meta property="fb:app_id" content="123456789">
         <meta property="og:url" content="https://fenêt.re">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Fenêtre">
@@ -82,6 +81,11 @@
                         </g>
                     </svg>
                 </div>
+                <nav class="menu">
+                    <div class="item fb-like" data-href="https://www.facebook.com/FenetreApp/" data-layout="button" data-action="recommend" data-size="small" data-show-faces="false" data-share="false"></div>
+                    <div class="item mail"><a href="https://twitter.com/messages/compose?recipient_id=913787151225106433&text=What%20an%20awesome%20app%20you%27ve%20made!" target="_blank">Contact</a></div>
+                    <div class="item"><a href="https://twitter.com/messages/compose?recipient_id=913787151225106433&text=What%20an%20awesome%20app%20you%27ve%20made!" target="_blank">@FenetreApp</a></div>
+                </nav>
             </header>
             <section id="prime" class="grey">
                 <aside id="prime-image" class="section-image hide-mobile">
@@ -195,7 +199,7 @@
                     <h2 data-aos="fade-up" data-aos-delay="100">With see-through and click-through features you've got
                         the best of both worlds. Multitasking just got a new best friend.
                     </h2>
-                    <a data-aos="fade-up" data-aos-delay="300" href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" target="_blank">This feature is only available on the pro version.</a>
+                    <a data-aos="fade-up" data-aos-delay="300" href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" class="buy" target="_blank">This feature is only available on the pro version.</a>
                     <div class="image" data-aos="fade-up" data-aos-delay="600">
                         <img
                             class="hide-desktop"
@@ -326,11 +330,13 @@
                     </svg>
                 </div>
                 <nav class="menu">
+                    <div class="item fb-like" data-href="https://www.facebook.com/FenetreApp/" data-layout="button" data-action="recommend" data-size="small" data-show-faces="false" data-share="false"></div>
                     <div class="item mail"><a href="https://twitter.com/messages/compose?recipient_id=913787151225106433&text=What%20an%20awesome%20app%20you%27ve%20made!" target="_blank">Contact</a></div>
                     <div class="item"><a href="https://twitter.com/messages/compose?recipient_id=913787151225106433&text=What%20an%20awesome%20app%20you%27ve%20made!" target="_blank">@FenetreApp</a></div>
                 </nav>
             </footer>
         </div>
+        <div id="fb-root"></div>
         <script src="./src/script.js"></script>
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107685548-1"></script>
@@ -339,6 +345,15 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'UA-107685548-1');
+        </script>
+        <script>
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
     </body>
 </html>
