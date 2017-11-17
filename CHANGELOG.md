@@ -1,4 +1,36 @@
-## 0.4.7 (2017-10-16)
+## 0.5.1 (2017-11-16)
+
+### Bug Fixes
+
+* fix: error handler in both renderer and main processes
+* fix: update pro checking for actions
+* fix(i18n): add missing locales and fix previous ones
+
+### Features
+
+* feat(free): new go pro video
+* feat(free): update display of settings
+
+# 0.5.0 (2017-11-16)
+
+### Bug Fixes
+
+* fix: safe window event handlers in case of destroyed windows
+* fix(clipboard): remove latency when using clipboard's value
+* fix(extension): handle errors from browser extension listener
+* fix(onboarding): make the popup larger
+
+### Features
+
+* feat: add help submenu with videos
+* feat(i18n): add localisation for French and English
+* feat(tray): show all menus on the Free version
+* feat(ui): slight design update of the top-bar
+* feat(viewer): remove some of the asynchronous window's id logic
+* feat: make the app single instance
+* feat: OSX High Sierra support
+
+## 0.4.7 (2017-10-22)
 
 ### Bug Fixes
 
