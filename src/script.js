@@ -49,4 +49,6 @@ $btnTry.forEach((bt) => {
   });
 });
 
-document.querySelector('.menu .item.mail a').href = 'mailto:support@fenêt.re';
+document.querySelectorAll('.menu .item.mail a').forEach((el) => {
+  el.href = 'mailto:support@fenêt.re';
+});

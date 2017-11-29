@@ -130,7 +130,9 @@ $btnTry.forEach(function (bt) {
   });
 });
 
-document.querySelector('.menu .item.mail a').href = 'mailto:support@fenêt.re';
+document.querySelectorAll('.menu .item.mail a').forEach(function (el) {
+  el.href = 'mailto:support@fenêt.re';
+});
 
 /***/ }),
 /* 1 */
