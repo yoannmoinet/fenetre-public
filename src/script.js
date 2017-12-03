@@ -52,3 +52,33 @@ $btnTry.forEach((bt) => {
 document.querySelectorAll('.menu .item.mail a').forEach((el) => {
   el.href = 'mailto:support@fenêt.re';
 });
+
+const createSource = (src, type) => {
+  const source = document.createElement('SOURCE');
+  source.src = src;
+  source.type = type;
+  return source;
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.video-placeholder').forEach((el) => {
+    const vid = document.createElement('VIDEO');
+    vid.loop = true;
+    vid.autoplay = true;
+    vid.classList.add(el.getAttribute('data-class'));
+    vid.poster = el.getAttribute('data-poster');
+
+    vid.appendChild(createSource(
+      el.getAttribute('data-video-1'),
+      el.getAttribute('data-video-1-type')
+    ));
+
+    vid.appendChild(createSource(
+      el.getAttribute('data-video-2'),
+      el.getAttribute('data-video-2-type')
+    ));
+
+    el.parentElement.appendChild(vid);
+    el.parentElement.removeChild(el);
+  });
+});
