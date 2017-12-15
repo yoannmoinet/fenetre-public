@@ -1,3 +1,30 @@
+## 0.5.3 (2017-12-14)
+
+### Bug Fixes
+
+* fix(i18n): add missing translations for media errors
+* fix: more async access of destroyed browserwindow handling
+* fix(viewer): no more full refresh when opening more than 1 window
+
+### Features
+
+* feat(about): more info on the about window
+* feat(tray): right-click opens the menu
+* feat(viewer): add a better custom video player
+* feat(window): no move/resize window when user did it first
+
+## 0.5.2 (2017-12-11)
+
+### Bug Fixes
+
+* fix(image): handle image errors
+
+### Features
+
+* feat: better url parser (now support url not sending head for example)
+* feat(video): decode way more video formats
+* feat: open a new window when link with target=_blank
+
 ## 0.5.1 (2017-11-16)
 
 ### Bug Fixes
