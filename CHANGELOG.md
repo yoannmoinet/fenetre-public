@@ -1,3 +1,13 @@
+## 0.5.4 (2018-01-27)
+
+### Bug Fixes
+
+* fix(plyr): correctly target plyr instance instead of array
+
+### Features
+
+* feat: add copy paste shortcuts and others
+
 ## 0.5.3 (2017-12-14)
 
 ### Bug Fixes
