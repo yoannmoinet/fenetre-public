@@ -1,3 +1,10 @@
+## 0.5.5 (2018-02-26)
+
+### Bug Fixes
+
+* fix(mobile): remove mobile optimised view
+* fix(popup): make video clickable in onboarding popup
+
 ## 0.5.4 (2018-01-27)
 
 ### Bug Fixes
