@@ -1,4 +1,19 @@
-## 0.5.5 (2018-02-26)
+## 0.5.6 (2018-04-04)
+
+### Bug Fixes
+
+* fix(i18n): add missing locales and make the file readable by translators
+* fix(i18n): update wrong key for settings save fail
+* fix(lite): reset go pro window with all onboarding messages
+* fix(parser): update twitch parser for new urls format
+* fix(resize): safer resize script
+
+### Features
+
+* feat(i18n): allow locale entries to have description and screenshots
+* feat(window): fenetre visible on all spaces
+
+## 0.5.5 (2018-02-24)
 
 ### Bug Fixes
 
