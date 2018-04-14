@@ -341,81 +341,6 @@ aside {
             }
         }
     }
-
-    & #and-more {
-        height: 400px;
-        overflow: hidden;
-        transition: height 0.25s linear;
-
-        & strong {
-            cursor: pointer;
-
-            &.hide-collapsed {
-                display: block;
-            }
-
-            &.show-collapsed {
-                display: none;
-            }
-
-            & svg {
-                &:first-child {
-                    margin-right: 20px;
-                }
-
-                &:last-child {
-                    margin-left: 20px;
-                }
-            }
-        }
-
-        & .feature-lists {
-            align-items: flex-start;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            margin: 40px auto 0;
-            max-width: 700px;
-
-            & .feature-list {
-                flex-basis: 50%;
-                align-self: flex-start;
-                transition: transform 250ms ease-in-out,
-                    opacity 250ms ease-in-out;
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        & ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        &.collapsed {
-            height: 20px;
-
-            & strong.hide-collapsed {
-                display: none;
-            }
-
-            & strong.show-collapsed {
-                display: block;
-            }
-
-            & .feature-lists .feature-list {
-                &#pro-list {
-                    transform: translateX(40px);
-                    opacity: 0;
-                }
-
-                &#free-list {
-                    transform: translateX(-40px);
-                    opacity: 0;
-                }
-            }
-        }
-    }
 }
 
 .list {
@@ -593,6 +518,25 @@ header .logo-container svg {
     }
 }
 
+#videos {
+    & #video-container {
+        & .embed {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+
+            & iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
 #unique-features {
     & #unique-text h2 {
         max-width: none;
@@ -606,12 +550,76 @@ header .logo-container svg {
     }
 }
 
-#features #and-more .feature-lists .feature-list {
-    font-size: 13px;
+.feature-lists {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 40px auto 0;
+    max-width: 700px;
+
+    & .feature-list {
+        flex-basis: 50%;
+        opacity: 1;
+
+        & h2 {
+            margin-top: 20px;
+        }
+
+        & ul {
+            margin-bottom: 0;
+
+            & li {
+                padding: 15px;
+
+                &:nth-child(odd) {
+                    background: var(--white);
+                }
+            }
+        }
+
+        &:first-child {
+            border: 1px solid var(--text-color-grey);
+            margin-right: 25px;
+
+            & h2 {
+                font-size: 18px;
+            }
+
+            & ul li:nth-child(odd) {
+                background: var(--grey2-background);
+            }
+
+            & .buttons a {
+                font-size: 18px;
+            }
+        }
+
+        &:nth-child(2) {
+            border: 1px solid var(--text-color-dark);
+            margin-left: 25px;
+
+            & h2 {
+                font-weight: 500;
+            }
+
+            & .buttons a {
+                font-weight: 500;
+            }
+        }
+
+        & .buttons {
+            & a {
+                width: 100%;
+                margin: -1px;
+            }
+        }
+    }
 }
 
-#buy-it .buttons {
-    margin-top: 20px;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -818,15 +826,6 @@ header .logo-container svg {
             margin: 50px auto -100px auto;
             width: 62%;
         }
-    }
-
-    #features #and-more .feature-lists .feature-list {
-        font-size: 16px;
-    }
-
-    #buy-it .buttons {
-        margin-top: 60px;
-        justify-content: center;
     }
 }
 

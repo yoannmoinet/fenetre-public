@@ -94,21 +94,8 @@ if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
   location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 }
 
-var $more = document.querySelector('#and-more');
 var $btnBuy = document.querySelectorAll('.buy');
 var $btnTry = document.querySelectorAll('.try');
-
-$more.querySelectorAll('strong').forEach(function (el) {
-  el.addEventListener('click', function () {
-    var collapsed = $more.classList.contains('collapsed');
-
-    if (collapsed) {
-      $more.classList.remove('collapsed');
-    } else {
-      $more.classList.add('collapsed');
-    }
-  });
-});
 
 $btnBuy.forEach(function (bt) {
   bt.addEventListener('click', function () {

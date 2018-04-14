@@ -13,21 +13,8 @@ if (location.hostname !== 'localhost' && location.protocol !== 'https:') {
     location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 }
 
-const $more = document.querySelector('#and-more');
 const $btnBuy = document.querySelectorAll('.buy');
 const $btnTry = document.querySelectorAll('.try');
-
-$more.querySelectorAll('strong').forEach((el) => {
-  el.addEventListener('click', () => {
-    const collapsed = $more.classList.contains('collapsed');
-
-    if (collapsed) {
-      $more.classList.remove('collapsed');
-    } else {
-      $more.classList.add('collapsed');
-    }
-  });
-});
 
 $btnBuy.forEach((bt) => {
   bt.addEventListener('click', () => {

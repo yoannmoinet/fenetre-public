@@ -83,6 +83,7 @@
                 </div>
                 <nav class="menu">
                     <div class="item fb-like" data-href="https://www.facebook.com/FenetreApp/" data-layout="button" data-action="recommend" data-size="small" data-show-faces="false" data-share="false"></div>
+                    <div class="item price"><a href="#buy-it">Pricing</a></div>
                     <div class="item mail"><a href="https://twitter.com/messages/compose?recipient_id=913787151225106433&text=What%20an%20awesome%20app%20you%27ve%20made!" target="_blank">Contact</a></div>
                     <div class="item"><a href="https://twitter.com/messages/compose?recipient_id=913787151225106433&text=What%20an%20awesome%20app%20you%27ve%20made!" target="_blank">@FenetreApp</a></div>
                 </nav>
@@ -139,6 +140,16 @@
                     </div>
                 </article>
             </section>
+            <section id="videos" class="odd">
+                <article id="videos-text" class="section-text">
+                    <h1 data-aos="fade-down">Instal & First usage</h1>
+                    <div id="video-container" data-aos="fade-up">
+                        <div class="embed">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL2jvDJe7CN0oi6nscDlWFZehvaIsE7OWh&rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </article>
+            </section>
             <section id="picture-in-picture" class="grey2">
                 <article id="picture-text" class="section-text">
                     <h2 data-aos="fade-down">This is the future of multitasking</h2>
@@ -159,14 +170,14 @@
                             <strong>Listen to conferences while coding</strong>
                             <p>Keep yourself updated and be productive.</p>
                         </div>
-                        <div class="item" data-aos="fade-right" data-aos-delay="600">
+                        <!-- <div class="item" data-aos="fade-right" data-aos-delay="600">
                             <img
                                 src="./assets/thumb_3.jpg"
                                 alt="Watch Netflix while working with Fenêtre"
                             />
                             <strong>Watch Netflix while working</strong>
                             <p>Binge watch that latest show, no chill.</p>
-                        </div>
+                        </div> -->
                         <div class="item" data-aos="fade-left" data-aos-delay="800">
                             <img
                                 src="./assets/thumb_4.jpg"
@@ -269,54 +280,50 @@
                             <p>multitask like a boss</p>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <div id="and-more" class="collapsed">
-                            <strong class="show-collapsed"><i class="fal fa-chevron-down"></i> And many more <i class="fal fa-chevron-down"></i></strong>
-                            <strong class="hide-collapsed"><i class="fal fa-chevron-up"></i> And many more <i class="fal fa-chevron-up"></i></strong>
-                            <div class="feature-lists">
-                                <div id="free-list" class="feature-list">
-                                    <h2>Included in Free</h2>
-                                    <ul>
-                                        <li>One window</li>
-                                        <li>Browser extension</li>
-                                        <li>Markdown preview</li>
-                                        <li>Code highlight</li>
-                                        <li>Mute window</li>
-                                        <li>Show/Hide window</li>
-                                        <li>Refined experience for specific websites</li>
-                                        <li>Local files access</li>
-                                    </ul>
-                                </div>
-                                <div id="pro-list" class="feature-list">
-                                    <h2>Included in Pro</h2>
-                                    <ul>
-                                        <li>All Free features</li>
-                                        <li>As many windows as needed</li>
-                                        <li>Click/See-through</li>
-                                        <li>Opacity control</li>
-                                        <li>Settings</li>
-                                        <li>Quick search</li>
-                                        <li>Control over defaults behaviors</li>
-                                        <li>Clipboard access</li>
-                                        <li>Customizable hotkeys</li>
-                                        <li>Recent items</li>
-                                        <li>Collapse window</li>
-                                        <li>Web navigation controls</li>
-                                        <li>And more to come...</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
             </section>
             <section id="buy-it" class="grey">
                 <article id="buy-text" class="section-text">
                     <h1 data-aos="fade-down">Buy it now</h1>
                     <h2 data-aos="fade-up" data-aos-delay="100">and greatly improve your productivity</h2>
-                    <div class="buttons">
-                        <a data-aos="fade-right" data-aos-delay="300" href="https://itunes.apple.com/us/app/fen%C3%AAtre-lite/id1288451627" target="_blank" class="button light try">Try lite version</a>
-                        <a data-aos="fade-left" data-aos-delay="300" href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" target="_blank" class="button buy">Go Pro</a>
+                    <div class="feature-lists">
+                        <div id="free-list" data-aos="fade-right" data-aos-delay="300" class="feature-list">
+                            <h2>Included in Free</h2>
+                            <ul>
+                                <li>One window</li>
+                                <li>Browser extension</li>
+                                <li>Settings</li>
+                                <li>Markdown preview</li>
+                                <li>Code highlight</li>
+                                <li>Mute window</li>
+                                <li>Show/Hide window</li>
+                                <li>Refined experience for specific websites</li>
+                                <li>Local files access</li>
+                            </ul>
+                            <div class="buttons">
+                                <a href="https://itunes.apple.com/us/app/fen%C3%AAtre-lite/id1288451627" target="_blank" class="button light try">Try lite version</a>
+                            </div>
+                        </div>
+                        <div id="pro-list" data-aos="fade-left" data-aos-delay="300" class="feature-list">
+                            <h2>Included in Pro</h2>
+                            <ul>
+                                <li>All Free features</li>
+                                <li>As many windows as needed</li>
+                                <li>Click/See-through</li>
+                                <li>Opacity control</li>
+                                <li>Clipboard access</li>
+                                <li>Quick search</li>
+                                <li>Control over defaults behaviors</li>
+                                <li>Customizable hotkeys</li>
+                                <li>Recent items</li>
+                                <li>Collapsable window</li>
+                                <li>Web navigation controls</li>
+                                <li>And more to come...</li>
+                            </ul>
+                            <div class="buttons">
+                                <a href="https://itunes.apple.com/us/app/fen%C3%AAtre/id1286743037" target="_blank" class="button buy">Go Pro</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </section>
