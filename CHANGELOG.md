@@ -1,3 +1,18 @@
+# 0.6.0 (2018-08-30)
+
+### Bug Fixes
+
+* fix(seethrough): activate seethrough at the correct distance
+* fix(shortcuts): support different keyboard layouts
+* fix(youtube): update youtube url parser to new url schemas
+
+### Features
+
+* feat(pro): add config for default position
+* feat(pro): add favorites
+* feat(pro): add hotkeys to move a Fenêtre on a grid
+* feat(video): add "Move your window" video to help menu
+
 ## 0.5.6 (2018-04-04)
 
 ### Bug Fixes
