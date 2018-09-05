@@ -1,3 +1,17 @@
+## 0.6.1 (2018-09-05)
+
+### Bug Fixes
+
+* fix(hotkeys): better error handling on hotkeys registration
+* fix(hotkeys): save latest hotkeys changes (moves)
+* fix(parser): missing split in the content-type parser
+* fix(parser): update youtube parser for cleaner processing
+
+### Features
+
+* feat(hotkeys): unregister shortcuts when no windows is focused
+* feat: open recents and favorites at their size and position when closed
+
 # 0.6.0 (2018-08-30)
 
 ### Bug Fixes
