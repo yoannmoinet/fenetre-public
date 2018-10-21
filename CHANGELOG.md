@@ -1,3 +1,10 @@
+## 0.6.2 (2018-10-21)
+
+### Bug Fixes
+
+* fix(parser): update content-type parser
+* fix(youtube): use initialAddress as referrer to avoid 'Video unavailable issues'
+
 ## 0.6.1 (2018-09-05)
 
 ### Bug Fixes
