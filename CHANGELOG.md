@@ -1,4 +1,10 @@
-## 0.6.2 (2018-10-21)
+## 0.6.3 (2018-12-22)
+
+### Features
+
+* feat: add sandbox access to location, camera and microphone
+
+## 0.6.2 (2018-12-22)
 
 ### Bug Fixes
 
