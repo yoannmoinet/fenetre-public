@@ -1,3 +1,25 @@
+## 0.7.1 (2019-10-09)
+
+### Bug Fixes
+
+* fix: international keymapping
+* fix: load urls with # in it
+* fix: open in new Fenêtre for target=_blank
+* fix: remove deprecations from electron 5.0.0
+* fix: translate opening error
+* fix: tray menu not showing recents and favorites
+* fix: update  changelog url
+* fix: update keymap signature
+* fix: update preloaded script
+* fix: window going behind fullscreen apps
+
+### Features
+
+* feat: add pdf support back after Electron upgrade
+* feat: show banner where widevine is needed
+* feat(free): remove perpetual "Go pro" popup.
+* feat: update to electron 6
+
 ## 0.6.3 (2018-12-22)
 
 ### Features
@@ -22,8 +44,8 @@
 
 ### Features
 
-* feat(hotkeys): unregister shortcuts when no windows is focused
 * feat: open recents and favorites at their size and position when closed
+* feat(hotkeys): unregister shortcuts when no windows is focused
 
 # 0.6.0 (2018-08-30)
 
@@ -76,9 +98,9 @@
 
 ### Bug Fixes
 
-* fix(i18n): add missing translations for media errors
-* fix: more async access of destroyed browserwindow handling
 * fix(viewer): no more full refresh when opening more than 1 window
+* fix: more async access of destroyed browserwindow handling
+* fix(i18n): add missing translations for media errors
 
 ### Features
 
@@ -95,17 +117,17 @@
 
 ### Features
 
-* feat: better url parser (now support url not sending head for example)
-* feat(video): decode way more video formats
 * feat: open a new window when link with target=_blank
+* feat(video): decode way more video formats
+* feat: better url parser (now support url not sending head for example)
 
 ## 0.5.1 (2017-11-16)
 
 ### Bug Fixes
 
+* fix(i18n): add missing locales and fix previous ones
 * fix: error handler in both renderer and main processes
 * fix: update pro checking for actions
-* fix(i18n): add missing locales and fix previous ones
 
 ### Features
 
@@ -116,20 +138,20 @@
 
 ### Bug Fixes
 
-* fix: safe window event handlers in case of destroyed windows
 * fix(clipboard): remove latency when using clipboard's value
 * fix(extension): handle errors from browser extension listener
 * fix(onboarding): make the popup larger
+* fix: safe window event handlers in case of destroyed windows
 
 ### Features
 
-* feat: add help submenu with videos
+* feat: make the app single instance
+* feat(viewer): remove some of the asynchronous window's id logic
+* feat: OSX High Sierra support
 * feat(i18n): add localisation for French and English
 * feat(tray): show all menus on the Free version
 * feat(ui): slight design update of the top-bar
-* feat(viewer): remove some of the asynchronous window's id logic
-* feat: make the app single instance
-* feat: OSX High Sierra support
+* feat: add help submenu with videos
 
 ## 0.4.7 (2017-10-22)
 
@@ -161,9 +183,9 @@
 
 ### Bug Fixes
 
+* fix(onboarding): change misleading message in first popup
 * fix: change app type from helper to real app
 * fix: do not download unsupported files, instead show a message
-* fix(onboarding): change misleading message in first popup
 
 ### Features
 
@@ -173,14 +195,12 @@
 
 ### Bug Fixes
 
-* fix: bug when accessing destroyed windows
-* fix(onboarding): do not steal focus with onboarding popup
-* fix: update firefox extension link in settings (thanks Hates_)
 * fix(about): better logo animation
 * fix(browser): will now open with the extension more consistently
 * fix(entitlements): remove server entitlement
 * fix(free): no more dual content playing at the same time
 * fix(markdown): remove leak of markdown viewer to every text files
+* fix(onboarding): do not steal focus with onboarding popup
 * fix(parser): keep the port of the url (thanks round, martinbalfanz)
 * fix(pro): remove duplicate shortcut registration
 * fix(resize): avoid any errors with NaN
@@ -188,12 +208,14 @@
 * fix(twitch): remove mobile view for Twitch (thanks dfcarpenter)
 * fix(web): remove useragent attribute if null (thanks  codeurge)
 * fix(window): avoid async access to window if destroyed
+* fix: bug when accessing destroyed windows
+* fix: update firefox extension link in settings (thanks Hates_)
 
 ### Features
 
-* feat(free): make 'Go Pro' popup non perpetual, come once, and go forever
 * feat: add context menu and enable copy/paste
 * feat: add Fenêtre to the 'Open With' of Finder and support file opening
+* feat(free): make 'Go Pro' popup non perpetual, come once, and go forever
 
 # 0.4.0 (2017-10-04)
 
@@ -216,11 +238,11 @@
 
 ### Bug Fixes
 
-* fix(free): focus and show when opening a new url on a hidden window
-* fix: not set undef IS_PRODUCTION flags, set at build time
-* fix: update styling to better handle scrolling and github md style
 * fix(parser): catch error when unresponding source
 * fix(youtube): better youtu.be handling and bigger sizing
+* fix: not set undef IS_PRODUCTION flags, set at build time
+* fix(free): focus and show when opening a new url on a hidden window
+* fix: update styling to better handle scrolling and github md style
 
 ### Features
 
