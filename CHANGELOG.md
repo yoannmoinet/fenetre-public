@@ -1,3 +1,11 @@
+## 0.7.2 (2019-10-17)
+
+### Bug Fixes
+
+* fix: loading error handling
+* fix: safer globalShortcut access
+* fix: shortcut register with error handling
+
 ## 0.7.1 (2019-10-09)
 
 ### Bug Fixes
