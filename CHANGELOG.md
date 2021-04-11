@@ -1,3 +1,28 @@
+## 0.8.1 (2021-04-11)
+
+### Features
+
+* feat: new icon for lite version
+
+# 0.8.0 (2021-04-11)
+
+### Bug Fixes
+
+* fix: correctly use dlopen for native-keymaps
+* fix: followup webpack bump fixes
+* fix: update minification script
+* fix: update twitch embed code
+* fix: use correct shortcuts to move window around
+* fix: webpack build issue
+* fix: widevine banner styling
+
+### Features
+
+* feat: clean built app and more logs
+* feat: upgrade to electron 12
+* feat: upgrade to webpack 4
+* feat: use native pdf reader
+
 ## 0.7.2 (2019-10-17)
 
 ### Bug Fixes
